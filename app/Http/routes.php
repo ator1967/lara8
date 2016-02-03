@@ -29,8 +29,8 @@ Route::get('/', function () {
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
-    Route::get('/home', 'HomeController@index');
-    Route::get('insert', 'Mycontrol@create');
-
+    Route::get('home', 'HomeController@index');
+     Route::get('arata', 'Mycontrol@arata');
+   
     Route::resource('Persoane', 'Mycontrol');
 });

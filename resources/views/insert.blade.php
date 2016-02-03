@@ -9,8 +9,12 @@
 
                 <div class="panel-body">
                 {{ Form::open(array('action' => 'Mycontrol@store')) }}
+                <div class="form-group row">
                 {{ Form::text('nume', 'Chuck') }} </br>
-                {{ Form::text('email', 'email@email.me') }}
+                </div>
+                <div class="form-group row">
+                {{ Form::text('email', 'email@email.me') }} </br>
+                </div>
                 {{ Form::submit('Save') }}
                 {{ Form::reset('Clear form') }}
                 {{ Form::close() }} 
