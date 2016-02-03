@@ -8,6 +8,6 @@ class Persoane extends Model
 {
     protected $table='persoane';
     protected $fillable =['nume','email'];
-   
+    // protected $connection='mysql';
 
 }
