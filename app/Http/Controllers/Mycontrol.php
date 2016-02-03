@@ -92,7 +92,9 @@ class Mycontrol extends Controller
      */
     public function destroy($id)
     {
-        //
+        Persoane::find($id)->delete();
+         Session::flash('message', 'Sters cu succes!');
+        //echo 'Am sters id'.$id;
     }
     public function arata()
     {

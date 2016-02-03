@@ -30,7 +30,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
     Route::get('home', 'HomeController@index');
-     Route::get('arata', 'Mycontrol@arata');
-   
+    Route::get('arata', 'Mycontrol@arata');
+    Route::get('Persoane/{id}/destroy', 'Mycontrol@destroy');
     Route::resource('Persoane', 'Mycontrol');
 });
