@@ -9,12 +9,10 @@
 
                 <div class="panel-body">
                 {{ Form::open(array('action' => 'Mycontrol@store')) }}
-
-               {{ Form::text('nume', 'Chuck') }} </br>
-               {{ Form::text('email', 'email@email.me') }}
-
-               {{ Form::submit('Save') }}
-               {{ Form::reset('Clear form') }}
+                {{ Form::text('nume', 'Chuck') }} </br>
+                {{ Form::text('email', 'email@email.me') }}
+                {{ Form::submit('Save') }}
+                {{ Form::reset('Clear form') }}
                 {{ Form::close() }} 
 
 
