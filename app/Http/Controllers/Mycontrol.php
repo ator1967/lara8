@@ -19,7 +19,8 @@ class Mycontrol extends Controller
      */
     public function index()
     {
-        //
+        $persoane=Persoane::all();
+        return view('home')->with('persoane', $persoane );
     }
 
     /**
@@ -93,16 +94,10 @@ class Mycontrol extends Controller
     public function destroy($id)
     {
         Persoane::find($id)->delete();
-         Session::flash('message', 'Sters cu succes!');
+       \Session::flash('message', 'Sters cu succes!');
         //echo 'Am sters id'.$id;
     }
-    public function arata()
-    {
-        $pers=Persoane::all();
-        foreach ($pers as $p) {
-  echo $p->nume;
-        }
-
-    }
+   
+    
 
 }
