@@ -31,7 +31,7 @@ Route::group(['middleware' => 'web'], function () {
 
     Route::get('home', 'Mycontrol@index');
    
-    Route::get('Persoane/{id}', 'Mycontrol@destroy');
+   // Route::get('Persoane/{id}', 'Mycontrol@destroy');
 
     Route::resource('Persoane', 'Mycontrol');
 });
