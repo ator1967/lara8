@@ -70,7 +70,7 @@ class Mycontrol extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('edit')->with('id',$id);
     }
 
     /**
@@ -82,7 +82,9 @@ class Mycontrol extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+       $pers->nume = $request->input('nume');
+       $pers->email = $request->input('email');
+       $pers->save();
     }
 
     /**
