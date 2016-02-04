@@ -29,9 +29,11 @@ Route::get('/', function () {
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
-    Route::get('home', 'Mycontrol@index');
-   
-   // Route::get('Persoane/{id}', 'Mycontrol@destroy');
-
     Route::resource('Persoane', 'Mycontrol');
+    Route::get('home', 'Mycontrol@index');
+    Route::get('Persoane/{id}/delete', 'Mycontrol@delete');
+    
+    Route::get('Persoane/create', 'Mycontrol@create');
+
+    
 });

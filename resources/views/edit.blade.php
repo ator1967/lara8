@@ -10,20 +10,20 @@
 
 
                 <div class="panel-body">
-     {{ Form::model($pers, ['route' => ['Persoane.update', $pers->id], 'method' => 'patch']) }}
-                <div class="form-group row">
-                {{ Form::text('nume', 'Nume') }} </br>
+     {{ Form::model($pers, ['route' => ['Persoane.update', $pers->id], 'method' => 'put']) }}
+                <div class="form-group">
+                {{ Form::label('nume si prenume') }} </br>
+                 {{ Form::text('nume', 'Nume ') }} </br>
+
                 </div>
-                <div class="form-group row">
+                <div class="form-group">
+                 {{ Form::label('Email') }} </br>
                 {{ Form::text('email', 'email@email.me') }} </br>
                 </div>
                 {{ Form::submit('Save') }}
-                {{ Form::reset('Clear form') }}
-                {{ Form::close() }} 
-
-
-
+                {{ Form::reset('Clear form') }}               
                 </div>
+                {{ Form::close() }}
             </div>
         </div>
     </div>
