@@ -30,6 +30,8 @@
 
      </table>
      
+     
 </div>
-
+{!! $persoane->total() !!}
+{!! $persoane->appends(['sort' => 'nume'])->links() !!}
 @stop

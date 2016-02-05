@@ -14,7 +14,7 @@ class Mycontrol extends Controller
 {
     public function index()
     {
-        $persoane=Persoane::all();
+        $persoane=Persoane::paginate(4);
         return view('home')->with('persoane', $persoane );
     }
 
