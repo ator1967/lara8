@@ -14,13 +14,13 @@
                 <div class="form-group">
                 {{ Form::label('nume si prenume') }} </br>
                  {{ Form::text('nume', 'Nume ') }} </br>
-
+                 
                 </div>
                 <div class="form-group">
                  {{ Form::label('Email') }} </br>
                 {{ Form::text('email', 'email@email.me') }} </br>
                 </div>
-                {{ Form::submit('Save') }}
+                {{ Form::submit('Save') }} 
                 {{ Form::reset('Clear form') }}               
                 </div>
                 {{ Form::close() }}

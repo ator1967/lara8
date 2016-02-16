@@ -30,8 +30,7 @@ class Mycontrol extends Controller
        $pers->email = $request->input('email');
        $pers->save();
 
-       Session::flash('message', 'Adaugat cu succes!');
-            return redirect('/Persoane/create');
+        return redirect('/Persoane/create')->with('mess', 'Adaugat cu succes!');
 
     }
 
@@ -52,14 +51,17 @@ class Mycontrol extends Controller
        $pers->nume = $request->input('nume');
        $pers->email = $request->input('email');
        $pers->save();
-       return redirect('home');
+      return redirect('home')->with('mesaj','A fost updatat '.$pers->nume);
     }
         public function delete($id)
     {
-        Persoane::find($id)->delete();
+       
+        $pers = Persoane::find($id);
+        
+        $pers->delete();
        //Session::flash('message', 'Sters cu succes!');
-        echo 'Am sters id'.$id;
-        return redirect('home');
+      //  echo 'Am sters id'.$id;
+        return redirect('home')->with('mesaj','A fost sters '.$pers->nume);
     }
 
  
